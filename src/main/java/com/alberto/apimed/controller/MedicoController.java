@@ -3,6 +3,8 @@ package com.alberto.apimed.controller;
 import com.alberto.apimed.entity.DadosCadastroMedico;
 import com.alberto.apimed.entity.Medico;
 import com.alberto.apimed.repository.MedicoRepository;
+import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,7 +19,8 @@ public class MedicoController {
     private MedicoRepository repository;
 
     @PostMapping
-    public void cadastrar(@RequestBody DadosCadastroMedico dados) {
+    @Transactional
+    public void cadastrar(@RequestBody @Valid DadosCadastroMedico dados) {
         repository.save(new Medico(dados));
     }
 }
