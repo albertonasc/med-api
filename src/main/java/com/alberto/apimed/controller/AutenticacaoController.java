@@ -1,6 +1,8 @@
 package com.alberto.apimed.controller;
 
 import com.alberto.apimed.domain.DadosAutenticacao;
+import com.alberto.apimed.domain.Usuario;
+import com.alberto.apimed.service.TokenService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,9 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class AutenticacaoController {
 
     private AuthenticationManager manager;
+    private TokenService tokenService;
 
-    public AutenticacaoController(AuthenticationManager manager) {
+    public AutenticacaoController(AuthenticationManager manager, TokenService tokenService) {
         this.manager = manager;
+        this.tokenService = tokenService;
     }
 
     @PostMapping
@@ -25,6 +29,6 @@ public class AutenticacaoController {
         var token = new UsernamePasswordAuthenticationToken(dados.login(), dados.senha());
         var authentication = manager.authenticate(token);
 
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok(tokenService.gerarToken((Usuario) authentication.getPrincipal()));
     }
 }
