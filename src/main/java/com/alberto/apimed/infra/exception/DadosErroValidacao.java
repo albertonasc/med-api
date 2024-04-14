@@ -1,4 +1,4 @@
-package com.alberto.apimed.infra;
+package com.alberto.apimed.infra.exception;
 
 import org.springframework.validation.FieldError;
 
