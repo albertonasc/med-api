@@ -1,6 +1,5 @@
-package com.alberto.apimed.entity;
+package com.alberto.apimed.domain;
 
-import com.alberto.apimed.endereco.Endereco;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -50,7 +49,7 @@ public class Medico {
         }
     }
 
-    public void excluir() {
+    public void excluirDaLista() {
         this.ativo = false;
     }
 }

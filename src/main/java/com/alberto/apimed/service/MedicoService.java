@@ -1,7 +1,7 @@
 package com.alberto.apimed.service;
 
-import com.alberto.apimed.entity.DadosListagemMedico;
-import com.alberto.apimed.entity.Medico;
+import com.alberto.apimed.domain.DadosListagemMedico;
+import com.alberto.apimed.domain.Medico;
 import com.alberto.apimed.repository.MedicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

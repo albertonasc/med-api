@@ -1,6 +1,5 @@
-package com.alberto.apimed.entity;
+package com.alberto.apimed.domain;
 
-import com.alberto.apimed.endereco.DadosEndereco;
 import jakarta.validation.constraints.NotNull;
 
 public record DadosAtualizacaoMedico(

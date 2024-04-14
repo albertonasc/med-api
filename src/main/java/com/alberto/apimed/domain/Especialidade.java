@@ -1,4 +1,4 @@
-package com.alberto.apimed.entity;
+package com.alberto.apimed.domain;
 
 public enum Especialidade {
     ORTOPEDIA,

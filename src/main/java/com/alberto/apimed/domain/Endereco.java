@@ -1,4 +1,4 @@
-package com.alberto.apimed.endereco;
+package com.alberto.apimed.domain;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

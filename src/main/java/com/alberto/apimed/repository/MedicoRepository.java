@@ -1,6 +1,6 @@
 package com.alberto.apimed.repository;
 
-import com.alberto.apimed.entity.Medico;
+import com.alberto.apimed.domain.Medico;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

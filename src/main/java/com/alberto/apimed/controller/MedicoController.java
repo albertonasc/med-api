@@ -1,6 +1,6 @@
 package com.alberto.apimed.controller;
 
-import com.alberto.apimed.entity.*;
+import com.alberto.apimed.domain.*;
 import com.alberto.apimed.service.MedicoService;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
@@ -49,7 +49,7 @@ public class MedicoController {
     @Transactional
     public ResponseEntity excluir(@PathVariable Long id) {
         var medico = service.buscaMedicoPorId(id);
-        medico.excluir();
+        medico.excluirDaLista();
         return ResponseEntity.noContent().build();
     }
 

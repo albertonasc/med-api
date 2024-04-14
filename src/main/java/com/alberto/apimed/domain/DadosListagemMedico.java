@@ -1,4 +1,4 @@
-package com.alberto.apimed.entity;
+package com.alberto.apimed.domain;
 
 public record DadosListagemMedico(Long id, String nome, String email, String crm, Especialidade especialidade) {
 

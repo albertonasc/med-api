@@ -1,6 +1,6 @@
 package com.alberto.apimed.controller;
 
-import com.alberto.apimed.entity.DadosCadastroPaciente;
+import com.alberto.apimed.domain.DadosCadastroPaciente;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
